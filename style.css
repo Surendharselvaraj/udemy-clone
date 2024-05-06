@@ -64,7 +64,7 @@ body {
     display: none;
 }
 .MyLearning:hover .MyLearning__popup{
-    display: block;
+    display: block ;
 }
     
 .categories{
@@ -79,6 +79,15 @@ body {
     color:white;
     padding: 10px;
     border-radius: 30px;
+    cursor:pointer;
+    border:solid black 1px;
+}
+.categories p:hover{
+    background-color: transparent;
+    transition: 1s;
+    color:black;
+    border: solid black 1px;
+    
 }
 .sale-image{
     position: relative;
@@ -93,7 +102,21 @@ body {
     bottom: 200px;
     left: 100px;
     padding: 10px;
-
+    opacity: 0;
+    animation-name: zoom;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    
+        transform: scale(1);
+    } 
 }
 .course-card{
     width:250px;
