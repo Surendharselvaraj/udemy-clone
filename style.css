@@ -104,8 +104,9 @@ body {
     padding: 10px;
     opacity: 0;
     animation-name: zoom;
-    animation-duration:1s;
+    animation-duration:2s;
     animation-fill-mode: forwards;
+    flex-basis: 20%;
 }
 @keyframes zoom{
     0%{
@@ -119,7 +120,9 @@ body {
     } 
 }
 .course-card{
-    width:250px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 .course-card img{
     width:100%;
@@ -143,7 +146,7 @@ body {
 .topics__container p{
     border: solid black 1px;
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     flex-grow: 1;
     flex-basis: 25%;
 }
@@ -171,4 +174,27 @@ body {
 .footer__two{
     margin: 20px;
     display: flex;
-    justify-content: space-be
+    justify-content: space-between;
+}
+.navbar__s4{
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+body{
+    font-size: 10px;
+}
+.course-card{
+    flex-basis: 40%;
+}  
+.categories{
+    display: none;
+} 
+.navbar__s3{
+    display: none;
+} 
+.navbar__s4{
+    display:block;
+}
+
+}
